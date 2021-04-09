@@ -10,8 +10,8 @@ bare-metal = "1.0.0"
 cortex-m = "0.6.0"
 cortex-m-rt = "0.6.10"
 cortex-m-semihosting = "0.3.3"
-feather_m4 = {version = "0.7.0", features = [ "rt" ]}
-atsamd51j = "0.9.0"
+feather_m4 = { version = "0.7.0", features = [ "rt" ] }
+atsamd51j = { version = "0.9.0", features = [ "rt" ] }
 cortex-m-rtic = "0.6.0-alpha.2"
 panic-semihosting = "0.5.6"
 

@@ -1,4 +1,9 @@
-`cargo check`
+This project is an attempt to bring up the
+[blinky_basic](https://github.com/atsamd-rs/atsamd/blob/master/boards/feather_m4/examples/blinky_basic.rs)
+sample under RTIC running on the
+[Adafruit Feather M4 Express](https://www.adafruit.com/product/3857).
+Without the attempt to set the RGB pin high the code builds and flashes fine. With it, though,
+`cargo check` produces the following error.
 
 ~~~
 /Users/rob/.cargo/bin/cargo check --manifest-path /Users/rob/projects/nhl/magtag-rtic/Cargo.toml
@@ -22,3 +27,7 @@ error: could not compile `magtag-rtic`
 
 To learn more, run the command again with --verbose.
 ~~~
+
+Adding `use feather_m4::prelude::_atsamd_hal_embedded_hal_digital_v2_OutputPin;` to
+the code doesn't help; the use statement is considered unneeded and the same error occurs.
+
